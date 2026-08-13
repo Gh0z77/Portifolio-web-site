@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brend ranglar RGB tripletlari — admin paneldan almashtiriladi (theme.ts) */
+:root {
+  --clr-matrix: 95 181 10;
+  --clr-matrix-bright: 142 230 30;
+  --clr-matrix-dim: 47 92 6;
+  --clr-matrix-dark: 29 58 4;
+  --clr-on-matrix: 4 6 12;
+  --clr-amber: 242 165 12;
+  --clr-amber-bright: 255 201 61;
+  --clr-amber-dim: 138 94 7;
+  --clr-on-amber: 4 6 12;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Scrollbarlar butunlay ko'rinmasin */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+body {
+  @apply bg-bg text-ghost font-mono antialiased;
+  overflow-x: hidden;
+}
+
+/* Desktopda odatiy kursor o'rniga maxsus kursor ishlaydi */
+@media (pointer: fine) {
+  body,
+  body * {
+    cursor: none !important;
+  }
+}
+
+::selection {
+  background: rgb(var(--clr-matrix) / 0.9);
+  color: rgb(var(--clr-on-matrix));
+}
+
+/* CRT scanline qoplamasi (blend-siz — yengil kompozit qatlam) */
+.crt-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.09) 3px,
+    transparent 4px
+  );
+}
+
+.crt-vignette {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 39;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(2, 4, 10, 0.55) 100%);
+}
+
+/* Rang USTIDAGI matn uchun avtomatik kontrast (tema bilan birga hisoblanadi) */
+.text-on-matrix {
+  color: rgb(var(--clr-on-matrix)) !important;
+}
+.text-on-amber {
+  color: rgb(var(--clr-on-amber)) !important;
+}
+.hover-text-on-matrix:hover {
+  color: rgb(var(--clr-on-matrix)) !important;
+}
+.hover-text-on-amber:hover {
+  color: rgb(var(--clr-on-amber)) !important;
+}
+
+/* Muzlatilgan shisha effekti — kartalar/panellar fonni xiralashtiradi */
+.glass {
+  background: rgb(10 15 30 / 0.72);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
+/* Burchaklari kesilgan cyberpunk shakl */
+.clip-corner {
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+}
+.clip-corner-sm {
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+}
+
+/* Glitch effekti (GlitchText komponenti ishlatadi) */
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.glitch::before {
+  color: rgb(var(--clr-matrix-bright));
+  z-index: -1;
+}
+.glitch::after {
+  color: rgb(var(--clr-amber));
+  z-index: -2;
+}
+.glitch:hover::before,
+.glitch.glitch-active::before {
+  opacity: 0.85;
+  animation: glitch-shift-1 0.9s steps(2, end) infinite;
+}
+.glitch:hover::after,
+.glitch.glitch-active::after {
+  opacity: 0.85;
+  animation: glitch-shift-2 0.9s steps(2, end) infinite;
+}
+@keyframes glitch-shift-1 {
+  0% { transform: translate(0); clip-path: inset(0 0 82% 0); }
+  20% { transform: translate(-4px, 2px); clip-path: inset(12% 0 60% 0); }
+  40% { transform: translate(3px, -1px); clip-path: inset(45% 0 38% 0); }
+  60% { transform: translate(-3px, 1px); clip-path: inset(68% 0 12% 0); }
+  80% { transform: translate(4px, -2px); clip-path: inset(30% 0 55% 0); }
+  100% { transform: translate(0); clip-path: inset(0 0 82% 0); }
+}
+@keyframes glitch-shift-2 {
+  0% { transform: translate(0); clip-path: inset(78% 0 0 0); }
+  25% { transform: translate(4px, -2px); clip-path: inset(52% 0 30% 0); }
+  50% { transform: translate(-4px, 2px); clip-path: inset(20% 0 65% 0); }
+  75% { transform: translate(2px, 1px); clip-path: inset(60% 0 22% 0); }
+  100% { transform: translate(0); clip-path: inset(78% 0 0 0); }
+}
+
+/* Kartadagi sichqonchaga ergashuvchi yorug'lik (CyberCard --mx/--my o'rnatadi) */
+.card-spotlight {
+  position: relative;
+}
+.card-spotlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background: radial-gradient(
+    360px circle at var(--mx, 50%) var(--my, 50%),
+    rgb(var(--clr-matrix) / 0.09),
+    transparent 65%
+  );
+  pointer-events: none;
+}
+.card-spotlight:hover::before {
+  opacity: 1;
+}
+
+/* Neon matn soyalari */
+.text-glow-green {
+  text-shadow: 0 0 8px rgb(var(--clr-matrix) / 0.7), 0 0 32px rgb(var(--clr-matrix) / 0.3);
+}
+.text-glow-amber {
+  text-shadow: 0 0 8px rgb(var(--clr-amber) / 0.7), 0 0 32px rgb(var(--clr-amber) / 0.3);
+}
+
+/* Ekran bo'ylab yuruvchi bug oyoqlari */
+.bug-leg {
+  transform-origin: center top;
+  animation: bug-legs-anim 0.18s ease-in-out infinite;
+}
+.bug-leg:nth-child(odd) {
+  animation-delay: 0.09s;
+}
+@keyframes bug-legs-anim {
+  0%, 100% { transform: rotate(-16deg); }
+  50% { transform: rotate(16deg); }
+}
+
+/* Form elementlari */
+.cyber-input {
+  @apply w-full bg-navy-900/40 border border-steel-dim text-ghost font-mono text-sm px-4 py-3 outline-none transition-all duration-300 placeholder:text-steel;
+}
+.cyber-input:focus {
+  @apply border-matrix;
+  box-shadow: 0 0 0 1px rgb(var(--clr-matrix) / 0.4), 0 0 24px rgb(var(--clr-matrix) / 0.12);
+}
+
+/* Kod bloklari / markdown */
+.prose-ghost {
+  @apply text-steel-light leading-relaxed;
+}
+.prose-ghost h1, .prose-ghost h2, .prose-ghost h3 {
+  @apply text-ghost font-display mt-8 mb-4;
+}
+.prose-ghost h1 { @apply text-2xl; }
+.prose-ghost h2 { @apply text-xl; }
+.prose-ghost h3 { @apply text-lg; }
+.prose-ghost p { @apply my-4; }
+.prose-ghost a { @apply text-matrix underline decoration-matrix/40 hover:decoration-matrix; }
+.prose-ghost ul { @apply list-disc list-inside my-4 space-y-1; }
+.prose-ghost ol { @apply list-decimal list-inside my-4 space-y-1; }
+.prose-ghost code {
+  @apply text-amber bg-navy-900/60 px-1.5 py-0.5 text-sm;
+}
+.prose-ghost pre {
+  @apply bg-navy-900/60 border border-steel-dim p-4 my-4 overflow-x-auto;
+}
+.prose-ghost pre code {
+  @apply bg-transparent p-0 text-matrix-bright;
+}
+.prose-ghost blockquote {
+  @apply border-l-2 border-amber pl-4 my-4 text-steel-light italic;
+}
+.prose-ghost img {
+  @apply max-w-full border border-steel-dim my-4;
+}
+
+/* Reduced motion hurmati */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
