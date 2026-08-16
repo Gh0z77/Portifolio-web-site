@@ -163,6 +163,81 @@ insert into public.blog_posts (title, slug, excerpt, content, tags, published) v
   )
 on conflict (slug) do nothing;
 
+-- ============ MIGRATSIYA #2: tarjimalar, javoblar, tema ============
+alter table public.projects add column if not exists i18n jsonb not null default '{}'::jsonb;
+alter table public.blog_posts add column if not exists i18n jsonb not null default '{}'::jsonb;
+alter table public.services add column if not exists i18n jsonb not null default '{}'::jsonb;
+alter table public.messages add column if not exists reply text;
+alter table public.messages add column if not exists replied_at timestamptz;
+
+drop policy if exists "settings_public_read" on public.site_settings;
+create policy "settings_public_read" on public.site_settings
+  for select using (key in ('theme_primary', 'theme_accent', 'content_overrides'));
+
+insert into public.site_settings (key, value) values
+  ('theme_primary', ''),
+  ('theme_accent', ''),
+  ('content_overrides', '')
+on conflict (key) do nothing;
+
+-- ============ MIGRATSIYA #3: xavfsizlik — MFA majburiy is_admin ============
+create or replace function public.is_admin()
+returns boolean
+language sql stable security definer
+set search_path = public
+as $fn$
+  select coalesce((auth.jwt() ->> 'email') = 'ghost@gmail.com', false)
+    and (
+      not exists (
+        select 1 from auth.mfa_factors
+        where user_id = auth.uid() and status = 'verified'
+      )
+      or coalesce(auth.jwt() ->> 'aal', 'aal1') = 'aal2'
+    )
+$fn$;
+
+-- ============ MIGRATSIYA #4: analytics va mijozlar fikri ============
+create table if not exists public.page_views (
+  id bigint generated always as identity primary key,
+  path text not null,
+  visitor text,
+  lang text,
+  device text,
+  referrer text,
+  created_at timestamptz not null default now()
+);
+create index if not exists idx_page_views_created on public.page_views (created_at);
+alter table public.page_views enable row level security;
+
+drop policy if exists "pv_public_insert" on public.page_views;
+create policy "pv_public_insert" on public.page_views for insert with check (true);
+drop policy if exists "pv_admin_read" on public.page_views;
+create policy "pv_admin_read" on public.page_views for select using (public.is_admin());
+drop policy if exists "pv_admin_delete" on public.page_views;
+create policy "pv_admin_delete" on public.page_views for delete using (public.is_admin());
+
+create table if not exists public.testimonials (
+  id uuid primary key default gen_random_uuid(),
+  name text not null,
+  role text,
+  text text not null,
+  avatar_url text,
+  sort_order int not null default 0,
+  active boolean not null default true,
+  i18n jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now()
+);
+alter table public.testimonials enable row level security;
+
+drop policy if exists "tm_public_read" on public.testimonials;
+create policy "tm_public_read" on public.testimonials for select using (active = true or public.is_admin());
+drop policy if exists "tm_admin_insert" on public.testimonials;
+create policy "tm_admin_insert" on public.testimonials for insert with check (public.is_admin());
+drop policy if exists "tm_admin_update" on public.testimonials;
+create policy "tm_admin_update" on public.testimonials for update using (public.is_admin());
+drop policy if exists "tm_admin_delete" on public.testimonials;
+create policy "tm_admin_delete" on public.testimonials for delete using (public.is_admin());
+
 insert into storage.buckets (id, name, public)
 values ('media', 'media', true)
 on conflict (id) do nothing;
