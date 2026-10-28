@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, useInView } from 'framer-motion'
 import { supabase } from '../lib/supabase'
+import { loadFeatured, loadServices } from '../lib/projects'
 import { useI18n } from '../lib/i18n'
 import { l10n } from '../lib/l10n'
 import { playCountTick, playCountDone } from '../lib/sound'
@@ -94,20 +95,8 @@ export default function Home() {
   }, [tr])
 
   useEffect(() => {
-    supabase
-      .from('projects')
-      .select('*')
-      .eq('featured', true)
-      .order('sort_order', { ascending: true })
-      .limit(3)
-      .then(({ data }) => setFeatured((data as Project[]) ?? []))
-    supabase
-      .from('services')
-      .select('*')
-      .eq('active', true)
-      .order('sort_order', { ascending: true })
-      .limit(3)
-      .then(({ data }) => setServices((data as Service[]) ?? []))
+    loadFeatured(3).then(setFeatured)
+    loadServices(3).then(setServices)
     supabase
       .from('testimonials')
       .select('*')

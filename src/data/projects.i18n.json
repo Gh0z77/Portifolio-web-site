@@ -1,0 +1,420 @@
+{
+  "project:uzgrow-site": {
+    "_src": "4df063890245",
+    "ru": {
+      "description": "Официальный сайт компании по строительству теплиц и агроинжинирингу UZ GROW: на трех языках, с админ-панелью и заявками, поступающими в Telegram.",
+      "content": "## О проекте\n\nОсновной действующий сайт компании — продукция, галерея проектов, новости и форма обратной связи в одном месте.\n\n### Что было сделано\n\n- Быстро загружающийся сайт на базе Next.js 16 (App Router) + React 19\n- Узбекский / русский / английский языки — переключение без изменения URL\n- Supabase: база данных и хранение файлов изображений/видео\n- Скрытая админ-панель: управление контентом, галереей и заявками\n- Заявки с сайта мгновенно отправляются в Telegram\n- Фоновое видео и полная мобильная адаптивность, SEO (sitemap, OG, canonical)\n- Автоматический деплой на Vercel (push в GitHub → сайт обновляется)"
+    },
+    "en": {
+      "description": "The official website of the greenhouse construction and agro-engineering company UZ GROW: in three languages, with an admin panel and inquiries sent to Telegram.",
+      "content": "## About the Project\n\nThe company's main active website — products, project gallery, news, and a contact form all in one place.\n\n### What was done\n\n- Fast-loading website built with Next.js 16 (App Router) + React 19\n- Uzbek / Russian / English languages — switching without changing the URL\n- Supabase: database and storage for image/video files\n- Hidden admin panel: management of content, gallery, and inquiries\n- Inquiries submitted from the website are instantly sent to Telegram\n- Background video and full mobile responsiveness, SEO (sitemap, OG, canonical)\n- Automatic deployment on Vercel (push to GitHub → website updates)"
+    }
+  },
+  "project:agro-alliance": {
+    "_src": "8d628fe36316",
+    "ru": {
+      "description": "Маркетинговая платформа, связывающая агро-блогеров Узбекистана с брендами: отдельные кабинеты для агентства, блогеров и компаний. Web + Android + iOS.",
+      "content": "## О проекте\n\nАгентство работает с 70–80 агро-блогерами по месячному контракту и продает их аудиторию компаниям в качестве рекламы. Платформа цифровизирует этот процесс.\n\n### Роли\n\n- **Агентство (админ)** — управляет блогерами, компаниями, кампаниями и статистикой\n- **Блогеры** — профиль, показатели аудитории, задания\n- **Компании** — входят в кабинет по логину/паролю, выбирают блогеров и сотрудничают\n\n### Техническая сторона\n\n- React + TypeScript + Vite, Tailwind CSS v4\n- Supabase: база данных, auth, защита RLS\n- Приложения для Android и iOS через Capacitor (единая кодовая база)\n- Аудит безопасности и ужесточение защиты\n- Хостинг на Netlify, домен agroalliance.uz"
+    },
+    "en": {
+      "description": "A marketing platform connecting agricultural bloggers in Uzbekistan with brands, featuring separate dashboards for the agency, bloggers, and companies. Web + Android + iOS.",
+      "content": "## About the project\n\nOperating with 70–80 agricultural bloggers under monthly contracts, the agency sells their audience reach as advertising to companies. The platform digitizes this entire workflow.\n\n### Roles\n\n- **Agency (admin)** — manages bloggers, companies, campaigns, and analytics\n- **Bloggers** — profile, audience metrics, tasks\n- **Companies** — login-secured dashboard to select bloggers and collaborate\n\n### Technical stack\n\n- React + TypeScript + Vite, Tailwind CSS v4\n- Supabase: database, auth, RLS security\n- Android and iOS apps via Capacitor (single codebase)\n- Security audit and hardening measures\n- Hosted on Netlify, domain agroalliance.uz"
+    }
+  },
+  "project:yasa": {
+    "_src": "79adaf26f329",
+    "ru": {
+      "description": "AI-конструктор приложений в стиле lovable.dev: пишите в чате, что нужно, а ИИ пишет реальный проект на React + Vite + Tailwind и показывает его вживую рядом.",
+      "content": "## О проекте\n\nПользователь ставит задачу на простом языке — Yasa создаёт полностью работающее React-приложение, показывает его в живом предпросмотре и публикует.\n\n### Возможности\n\n- Создание через чат: потоковый ответ, карточки изменений файлов, сводка «размышлений» ИИ\n- Живой просмотр — каждый проект на отдельном поддомене, режим телефона/планшета, консоль\n- Автоисправление: при ошибке сборки ИИ сам исправляет её до 2 раз\n- Выбор элемента: клик по элементу в предпросмотре с запросом изменить именно его\n- Редактор кода, история версий, восстановление, Отменить / Повторить\n- Публикация, сообщество и ремиксы, скачивание ZIP\n- Несколько ИИ-провайдеров: Claude, Gemini, совместимые с OpenAI (OpenRouter, DeepSeek, Groq, Ollama) и демо-режим без ключа\n- Интерфейс на трех языках: узбекский, русский, английский"
+    },
+    "en": {
+      "description": "A lovable.dev-style AI app builder: you type what you need in the chat, and the AI writes a real React + Vite + Tailwind project and displays it live side-by-side.",
+      "content": "## About the Project\n\nUsers give tasks in plain language — Yasa builds a fully working React application, displays it in a live preview, and publishes it.\n\n### Features\n\n- Chat-based creation: streaming response, file change cards, AI \"thinking\" summary\n- Live preview — each project on a separate subdomain, phone/tablet mode, console\n- Auto-fix: if a build error occurs, the AI automatically fixes it up to 2 times\n- Element selection: click on an element in the preview and ask to modify specifically that element\n- Code editor, version history, restore, Undo / Redo\n- Publishing, community and remixes, ZIP download\n- Multiple AI providers: Claude, Gemini, OpenAI-compatible (OpenRouter, DeepSeek, Groq, Ollama) and keyless demo mode\n- Three-language interface: Uzbek, Russian, English"
+    }
+  },
+  "project:uz-grow-xodim": {
+    "_src": "af21a0fe9deb",
+    "ru": {
+      "description": "Внутренняя система управления сотрудниками компании UZ GROW: отдельные кабинеты для 15 ролей, общий бэкенд на Express и база данных Neon Postgres. Также имеется приложение для Android.",
+      "content": "## О проекте\n\nВсе отделы компании — администратор, руководители, менеджеры, HR, бухгалтерия и еще 15 ролей — работают на одной платформе. У каждой роли есть свое рабочее пространство, навигация и данные.\n\n### Что имеется\n\n- Защищенные на основе ролей маршруты и JWT-аутентификация\n- Админ-панель: пользователи, роли, пароли, журнал активности\n- Общие для всех ролей компоненты: AI-ассистент, профиль, инструменты\n- Группировка файлов, пагинация, оптимизация скорости\n- Express бэкенд + Neon Postgres (serverless)\n- Android приложение через Capacitor\n- Полная документация: руководства по сдаче, интеграции и деплою"
+    },
+    "en": {
+      "description": "Internal employee management system for UZ GROW: separate dashboards for 15 roles, a shared Express backend, and a Neon Postgres database. An Android app is also available.",
+      "content": "## About the project\n\nAll company departments — administrator, executives, managers, HR, accounting, and 15 other roles — work on a single platform. Each role has its own workspace, navigation, and data.\n\n### What is included\n\n- Role-based protected routes and JWT authentication\n- Admin panel: users, roles, passwords, activity log\n- Cross-role shared components: AI assistant, profile, tools\n- File grouping, pagination, speed optimization\n- Express backend + Neon Postgres (serverless)\n- Android app via Capacitor\n- Complete documentation: handoff, integration, and deployment guides"
+    }
+  },
+  "project:uzgrow-bot": {
+    "_src": "e0d20320ec88",
+    "ru": {
+      "description": "Два Telegram-бота и Mini App для сотрудников: клиент сразу начинает чат по личной ссылке сотрудника, а сотрудники ведут все беседы в приложении внутри Telegram.",
+      "content": "## О проекте\n\n- **Бот для клиентов** — клиент выбирает оператора или менеджера (или пишет напрямую по личной ссылке сотрудника), автоответ на первое сообщение\n- **Бот для сотрудников** — список чатов, история, ответы, статус онлайн/оффлайн; админ-панель: добавление сотрудников, блокировка; массовая рассылка и жалобы для РОП\n- **Mini App** — окно чата, открывающееся внутри Telegram, профиль и админ-панель; быстрая загрузка с фоновым prefetch и кэшем\n\n### Конфиденциальность\n\nКаждый чат видят только клиент и выбранный им сотрудник. Чат, на который поступила жалоба, могут читать только РОП и developer. Все сообщения хранятся в базе Supabase."
+    },
+    "en": {
+      "description": "Two Telegram bots and an employee Mini App: the client starts a chat immediately via the employee's personal link, and employees handle all conversations within the Telegram app.",
+      "content": "## About the project\n\n- **Client bot** — client selects an operator or manager (or writes directly via the employee's personal link), auto-reply to the first message\n- **Employee bot** — chat list, history, replying, online/offline status; admin panel: adding employees, blocking; broadcast messages and complaints for Head of Sales\n- **Mini App** — chat window opening inside Telegram, profile, and admin panel; loads quickly with background prefetch and cache\n\n### Privacy\n\nEvery chat is visible only to the client and the chosen employee. A reported chat can only be read by the Head of Sales and the developer. All messages are in the Supabase database."
+    }
+  },
+  "project:uzgrow-dashboard": {
+    "_src": "661b2eefe9bd",
+    "ru": {
+      "description": "Ежедневные / еженедельные / ежемесячные KPI результаты и рейтинг менеджеров по продажам: звонки поступают автоматически из OnlinePBX, продажи — из amoCRM.",
+      "content": "## О проекте\n\nЖивая доска для руководства: кто сделал сколько реальных звонков, сколько времени общался, сколько сделок закрыл — все рассчитывается автоматически.\n\n### Возможности\n\n- Интеграция с OnlinePBX: количество реальных звонков, время разговора\n- Интеграция с amoCRM: количество и сумма выигранных сделок\n- Редактирование по клику: план, бонус, ежедневный результат — Enter сохраняет, Esc отменяет\n- Рейтинг: баллы по процентам KPI, медали 1-2-3, лидер месяца, победители ежедневных бонусов\n- Фильтр: день / неделя / месяц / год / период, сортировка по сотрудникам и KPI\n- Сотрудники: добавление, фото, внутренний номер, ID amoCRM, деактивация"
+    },
+    "en": {
+      "description": "Daily / weekly / monthly KPI results and ranking of sales managers: calls come automatically from OnlinePBX, sales from amoCRM.",
+      "content": "## About the project\n\nLive dashboard for management: who made how many real calls, how much talk time, how many deals closed — everything is calculated automatically.\n\n### Features\n\n- OnlinePBX integration: number of real contacts, talk time\n- amoCRM integration: number and amount of won deals\n- Click-to-edit: plan, bonus, daily result — Enter saves, Esc cancels\n- Ranking: points from KPI percentages, 1-2-3 medals, monthly leader, daily bonus winners\n- Filter: day / week / month / year / custom range, sorting by employees and KPIs\n- Employees: add, photo, extension number, amoCRM ID, deactivate"
+    }
+  },
+  "project:uzgrow-org": {
+    "_src": "c33e190bb7b3",
+    "ru": {
+      "description": "React-приложение для ведения отделов компании, сотрудников и их 10-секционных анкет: учредитель → CEO → дерево отделов, оценка и печать.",
+      "content": "## О проекте\n\n- Общая структура: учредитель → CEO → отделы; добавление отдела и сотрудника\n- Кабинет отдела: дерево (руководитель → сотрудники → группы), процент заполнения анкеты, задачи\n- Анкета сотрудника — 10 разделов: личные данные, образование, трудовая деятельность, семья, личность, хобби, цели, оценка, развитие, предложения\n- Оценка: 6 критериев, 100 баллов, уровень автоматически\n- Загрузка изображений (автоматически 512px), режим печати\n- Сервер не требуется — данные сохраняются в браузере; сдано с живым тестированием сайта и списком недочетов"
+    },
+    "en": {
+      "description": "React application for managing company departments, employees, and their 10-section questionnaires: founder → CEO → department tree, evaluation, and printing.",
+      "content": "## About the project\n\n- General structure: founder → CEO → departments; add department and employee\n- Department dashboard: tree (manager → employees → groups), questionnaire completion percentage, tasks\n- Employee questionnaire — 10 sections: personal, education, employment, family, personality, hobbies, goals, evaluation, development, suggestions\n- Evaluation: 6 criteria, 100 points, automatic level\n- Image upload (auto 512px), print mode\n- No server needed — data is stored in the browser; delivered with live site testing and a bug/issue list"
+    }
+  },
+  "project:grow-eco": {
+    "_src": "4dc6d587c379",
+    "ru": {
+      "description": "Живая презентация-калькулятор для руководства: слева вводятся цифры, справа результаты 4 бизнес-моделей, KPI и графики меняются в реальном времени.",
+      "content": "## О проекте\n\nПять вкладок: Smart Issiqxona, Ulgurji Bozor, Moliyaviy Yordam (SaaS), Учебные центры и их общая консолидация (ECO).\n\n### Возможности\n\n- На каждой вкладке панель расчетов и живые результаты: KPI, графики\n- 3-летняя стратегия роста и совокупный денежный поток\n- Конвертация валют USD ↔ UZS\n- Режим презентации — панели скрываются, цифры увеличиваются\n- Сохранение и восстановление сценариев по имени: облако Supabase + резервная копия localStorage, автосохранение"
+    },
+    "en": {
+      "description": "Live presentation-calculator for management: numbers are entered on the left, on the right the results of 4 business models, KPIs and charts change in real time.",
+      "content": "## About the project\n\nFive tabs: Smart Issiqxona, Ulgurji Bozor, Moliyaviy Yordam (SaaS), Training Centers, and their general consolidation (ECO).\n\n### Features\n\n- Calculation panel and live results on each tab: KPIs, charts\n- 3-year growth strategy and cumulative cash flow\n- USD ↔ UZS currency exchange\n- Presentation mode — panels are hidden, numbers become larger\n- Save and restore scenarios by name: Supabase cloud + localStorage backup, auto-save"
+    }
+  },
+  "project:vakansiya-bot": {
+    "_src": "870c273608e4",
+    "ru": {
+      "description": "Telegram-бот + Mini App анкета, которая автоматически фильтрует кандидатов из рекламы, собирает анкету и отправляет готовую карточку в отдел кадров (HR).",
+      "content": "## О проекте\n\n- Пошаговый поток: заявка → предложение компании → анкета → подтверждение\n- Отдельные заявка, предложение и вопросы для каждой должности\n- Отслеживание источника рекламы (deep-link: Instagram, Telegram, TikTok, Facebook, блогер)\n- Карточка HR + кнопки: назначить встречу / отклонить / дополнительный вопрос\n- Кандидат может ответить на вопрос HR — ответ возвращается HR\n- Админ-панель: кандидаты, фильтрация по должности/статусу, статистика, отчет Excel, полное удаление кандидата\n- Роли: кандидат / HR админ / супер админ; работает на серверлесс Vercel"
+    },
+    "en": {
+      "description": "A Telegram bot + Mini App questionnaire that automatically filters candidates from ads, collects the application form, and sends a ready-made card to the HR department.",
+      "content": "## About the project\n\n- Step-by-step flow: application → company offer → questionnaire → confirmation\n- Separate application, offer, and questions for each position\n- Ad source tracking (deep-link: Instagram, Telegram, TikTok, Facebook, blogger)\n- HR card + buttons: schedule meeting / reject / additional question\n- Candidate can answer the HR's question — the answer goes back to HR\n- Admin panel: candidates, filtering by position/status, statistics, Excel report, complete candidate deletion\n- Roles: candidate / HR admin / super admin; runs on Vercel serverless"
+    }
+  },
+  "project:uzgrow-voice": {
+    "_src": "8a90fbdb3d15",
+    "ru": {
+      "description": "Панель для преобразования телефонных разговоров отдела продаж в текст на узбекском и русском языках и оценки менеджеров по чек-листу.",
+      "content": "## О проекте\n\n- Общий вид: KPI-карточки, график результатов, звонки по часам, слабые критерии, возражения, язык/диалект, темы\n- Звонки: фильтры (менеджер, результат, тип, язык, направление), поиск, сортировка, экспорт в CSV\n- Страница звонка: аудиоплеер + транскрипт (перевод, отслеживание, скорость), оценка по чек-листу, настроение, комментарии\n- Менеджеры: таблица + матрица сильных/слабых сторон, профиль каждого менеджера и рекомендации\n- Настройки: API-ключ, язык, модель, словарь компании, редактор критериев оценки\n- Next.js 15 (App Router) + TypeScript + Tailwind 4; работает сразу с демонстрационными 20 звонками"
+    },
+    "en": {
+      "description": "A dashboard that transcribes sales department phone calls in Uzbek and Russian and evaluates managers against a checklist.",
+      "content": "## About the Project\n\n- Overview: KPI cards, results chart, calls by hour, weak criteria, objections, language/dialect, topics\n- Calls: filters (manager, result, type, language, direction), search, sorting, CSV export\n- Call page: audio player + transcript (translation, tracking, speed), checklist score, sentiment, notes\n- Managers: table + strengths/weaknesses matrix, individual manager profile and recommendations\n- Settings: API key, language, model, company dictionary, evaluation criteria editor\n- Next.js 15 (App Router) + TypeScript + Tailwind 4; works out of the box with 20 demo calls"
+    }
+  },
+  "project:listingforge": {
+    "_src": "ed8a359d76c8",
+    "ru": {
+      "description": "ИИ-генератор листингов для продавцов на Etsy, Amazon, Shopify и eBay: название товара и несколько предложений → заголовок, описание, SEO-теги, рекламный текст и переводы.",
+      "content": "## О проекте\n\nПродавец пишет название товара и короткое описание — приложение возвращает заголовок, описание, маркированные списки, 13 SEO-тегов, длиннохвостые ключевые слова (long-tail), рекламный текст и опциональные переводы, соответствующие требованиям платформ.\n\n### Техническая сторона\n\n- Next.js 16 (App Router), TypeScript, Tailwind 4\n- Цепочка бесплатных ИИ-провайдеров: Gemini → OpenAI-совместимый API → Pollinations; работает даже без ключа\n- Telegram-бот, использующий тот же генератор (вебхук)\n- Бесплатная бета-версия без аккаунта и оплаты: дневной лимит для каждого посетителя\n- Лендинг и страница генератора для глобальной (англоязычной) аудитории"
+    },
+    "en": {
+      "description": "AI listing generator for Etsy, Amazon, Shopify and eBay sellers: product name and a few sentences → title, description, SEO tags, ad copy, and translations.",
+      "content": "## About the Project\n\nSeller enters a product name and a short description — the app returns platform-optimized titles, descriptions, bullet points, 13 SEO tags, long-tail keywords, ad copy, and optional translations.\n\n### Technical Details\n\n- Next.js 16 (App Router), TypeScript, Tailwind 4\n- Free AI provider chain: Gemini → OpenAI-compatible API → Pollinations; works even without an API key\n- Telegram bot using the same generator (webhook)\n- Free beta without accounts or payments: daily limit per visitor\n- Landing page and generator page for a global (English-speaking) audience"
+    }
+  },
+  "project:ai-app-builder": {
+    "_src": "16416abe882e",
+    "ru": {
+      "description": "Пишете идею — ИИ пишет приложение на Next.js, запускает в отдельном sandbox и дает живой превью. Проекты, история сообщений и фрагменты сохраняются в базе.",
+      "content": "## О проекте\n\n- Промпт → ИИ-агент пишет код → сборка в E2B sandbox → ссылка на живой превью\n- Готовые шаблоны: CRM, e-commerce, блог, дашборд, лендинг, чат-приложение\n- Проекты и история сообщений: каждый ответ сохраняется как фрагмент (код + превью)\n- Фоновые задачи через Inngest: долгая генерация ИИ не блокирует браузер\n- Next.js (App Router) + tRPC + Prisma + Inngest + E2B sandboxes\n- Интерфейс на узбекском языке"
+    },
+    "en": {
+      "description": "You write an idea — AI writes a Next.js application, runs it in a separate sandbox and provides a live preview. Projects, message history and fragments are stored in the database.",
+      "content": "## About the project\n\n- Prompt → AI agent writes code → build in E2B sandbox → live preview link\n- Ready templates: CRM, e-commerce, blog, dashboard, landing, chat app\n- Projects and message history: each response is saved as a fragment (code + preview)\n- Background tasks via Inngest: long AI generation does not block the browser\n- Next.js (App Router) + tRPC + Prisma + Inngest + E2B sandboxes\n- Interface in Uzbek language"
+    }
+  },
+  "project:gracia": {
+    "_src": "6ac2300f10a5",
+    "ru": {
+      "description": "Монохромный сайт класса люкс для итальянского семейного ресторана в Андижане: интерактивная витрина блюд, фильтруемое меню, предзаказ и бронирование столика по плану зала.",
+      "content": "## О проекте\n\n- Интерактивный спотлайт блюд и карточка с фильтрами (меню)\n- Список предзаказа\n- Выбор и бронирование столика по плану зала\n- Защищенная паролем панель управления для менеджеров\n- Узбекский, русский и английский — автоопределение\n- TanStack Start (SSR) + React 19 + Tailwind CSS v4 + Supabase; все анимации на чистом CSS"
+    },
+    "en": {
+      "description": "Monochrome luxury website for an Italian family restaurant in Andijan: interactive dish showcase, filterable menu, pre-ordering, and table reservation via the hall layout.",
+      "content": "## About the project\n\n- Interactive dish spotlight and filterable card (menu)\n- Pre-order list\n- Table selection and reservation using the hall layout\n- Password-protected management room for managers\n- Uzbek, Russian, and English — automatic selection\n- TanStack Start (SSR) + React 19 + Tailwind CSS v4 + Supabase; all animations in pure CSS"
+    }
+  },
+  "project:gracia-miniapp": {
+    "_src": "02492b131ab7",
+    "ru": {
+      "description": "Приложение внутри Telegram для клиентов ресторана Gracia: меню, корзина, доставка, бронирование столика, кэшбек и анкета — всё не выходя из бота.",
+      "content": "## О проекте\n\n- Главная страница: баланс кэшбека, популярные блюда, быстрые кнопки\n- Меню и корзина, заказ на доставку\n- Бронирование столика\n- Профиль и заполнение анкеты для получения подарочного кэшбека\n- Безопасная аутентификация через Telegram initData\n- FastAPI backend, на Vercel serverless"
+    },
+    "en": {
+      "description": "An in-Telegram app for Gracia restaurant customers: menu, cart, delivery, table reservation, cashback, and questionnaire — all without leaving the bot.",
+      "content": "## About the project\n\n- Home page: cashback balance, popular dishes, quick buttons\n- Menu and cart, delivery order\n- Table reservation\n- Profile and filling out a questionnaire to receive gift cashback\n- Secure authentication via Telegram initData\n- FastAPI backend, on Vercel serverless"
+    }
+  },
+  "project:yesmine": {
+    "_src": "c164f5b27ffa",
+    "ru": {
+      "description": "Полноценный e-commerce для бренда Yesmine: дизайн-система, лендинг, магазин, корзина, оформление заказа с адресом доставки и админ-панель, подключенная к реальной базе данных.",
+      "content": "## О проекте\n\n- Дизайн-система бренда: палитра цветов на основе логотипа, заголовки с засечками, фоны с сетчатым градиентом\n- Лендинг, каталог, страница товара, корзина, оформление заказа (демо-оплата + адрес доставки)\n- Админ-панель: товары, заказы, клиенты — реальные данные на базе Supabase\n- TanStack Start (SSR) + React 19 + Tailwind 4\n- Отдельная панель для сотрудников (Yesmine Employee Panel), подключенная к той же базе данных"
+    },
+    "en": {
+      "description": "Full e-commerce solution for the Yesmine brand: design system, landing page, store, shopping cart, checkout with delivery address, and an admin panel connected to a real database.",
+      "content": "## About the Project\n\n- Brand design system: color palette derived from the logo, serif headings, mesh-gradient backgrounds\n- Landing page, catalog, product page, cart, checkout (demo payment + delivery address)\n- Admin panel: products, orders, customers — real data powered by Supabase\n- TanStack Start (SSR) + React 19 + Tailwind 4\n- Dedicated staff panel (Yesmine staff panel) connected to the same database"
+    }
+  },
+  "project:yesmine-panel": {
+    "_src": "8c30521a01f1",
+    "ru": {
+      "description": "Отдельное приложение для сотрудников магазина: один логин — база определяет должность сотрудника и перенаправляет в его панель. Защита не в коде, а в базе (RLS + has_permission).",
+      "content": "## О проекте\n\nСотрудник вводит email и пароль — куда он попадет, решает не браузер, а база данных. Меню также формируется на основе прав: у кассира раздел «Финансы» вообще не отображается.\n\n### Страницы (каждая со своими правами)\n\n- Панель управления, касса и смена\n- Лиды, заказы, товары, клиенты\n- Маркетинг / SMM, сотрудники, финансы, снабжение\n\nВручную ввести адрес и перейти в другой раздел не получится — страница вернет ошибку, база все равно не отдаст данные."
+    },
+    "en": {
+      "description": "A separate app for store employees: a single login — the database determines the employee's role and routes them to their panel. Security is enforced in the database, not in the code (RLS + has_permission).",
+      "content": "## About the project\n\nAn employee enters their email and password — where they land is decided by the database, not the browser. The menu is also built based on permissions: the \"Finance\" section is completely hidden from a cashier.\n\n### Pages (each with its own permissions)\n\n- Dashboard, POS/cash register, and shift management\n- Leads, orders, products, customers\n- Marketing / SMM, employees, finance, supply chain\n\nManually typing the URL to access another section won't work — the page will redirect, and the database won't return any data anyway."
+    }
+  },
+  "project:yasmine-xodim": {
+    "_src": "f5b0dba0ada0",
+    "ru": {
+      "description": "Платформа управления сотрудниками: лендинг с возможностями, модулями, ценами и страницей клиентов, приложение с выбором ролей и защищенный с помощью JWT бэкенд.",
+      "content": "## О проекте\n\n- Лендинг: главная страница, возможности, модули, цены, клиенты\n- Часть приложения: выбор роли → email/пароль → рабочее пространство\n- Express бэкенд, ключ подписи JWT хранится в базе данных\n- React + TypeScript + Vite + Tailwind\n- Конфигурация деплоя на Render и Vercel"
+    },
+    "en": {
+      "description": "Employee management platform: landing page with features, modules, pricing, and clients page, role-selection application, and a JWT-secured backend.",
+      "content": "## About the project\n\n- Landing: home page, features, modules, pricing, clients\n- Application part: role selection → email/password → workspace\n- Express backend, JWT signature key stored in the database\n- React + TypeScript + Vite + Tailwind\n- Deployment configuration for Render and Vercel"
+    }
+  },
+  "project:shoxtaxi": {
+    "_src": "a4272e04357b",
+    "ru": {
+      "description": "Telegram Mini App, объединяющий водителя и пассажира в одном месте: карта мест и цена, код бронирования, двусторонняя оценка, процент надежности и курьерская служба.",
+      "content": "## О проекте\n\nПроблема: поиск водителя через группы — кто, когда и на каком месте поедет, неизвестно. В приложении всё зафиксировано и отслеживается.\n\n### Возможности\n\n- Лента объявлений: поездки водителей и заказы пассажиров, фильтр по городу/дате\n- Бронирование: выбор на карте мест, автоподтверждение, 4-значный код брони\n- Надежность: двусторонняя оценка и теги, автосуспенд при низком рейтинге\n- Подтверждение «Готов», смена водителя только с согласия всех пассажиров\n- Почта: отправка груза водителю, едущему в Ташкент, цена по размерам\n- Связь только внутри приложения — номера телефонов не показываются\n- FastAPI + SQLAlchemy + миграции Alembic, уведомления через Telegram bot"
+    },
+    "en": {
+      "description": "Telegram Mini App that brings together drivers and passengers in one place: seat map and price, booking code, two-way rating, reliability percentage, and delivery service.",
+      "content": "## About the Project\n\nProblem: finding a driver through groups — who, when, and which seat they will take is unknown. In the app, everything is recorded and trackable.\n\n### Features\n\n- Feed: driver trips and passenger orders, city/date filter\n- Booking: seat map selection, auto-confirmation, 4-digit booking code\n- Trust: two-way rating and tags, auto-suspend on low rating\n- \"Ready\" confirmation, driver change only with all passengers' consent\n- Mail: sending parcels to a driver heading to Tashkent, pricing by size\n- Communication strictly in-app — phone numbers are hidden\n- FastAPI + SQLAlchemy + Alembic migrations, Telegram bot notifications"
+    }
+  },
+  "project:smart-attire": {
+    "_src": "fb74b71bfa52",
+    "ru": {
+      "description": "Веб-приложение для магазина одежды с использованием ИИ, которое позволяет «примерить» одежду на фото клиента: загрузка фото → выбор одежды → скачивание результата. Регистрация не требуется.",
+      "content": "## О проекте\n\n- 3-шаговая страница примерки: фото → одежда → результат\n- Скрытая панель администратора: управление каталогом одежды (открывается также по 5 кликам на заголовок)\n- Редактирование изображений Gemini (Lovable AI Gateway / Google AI Studio / OpenRouter)\n- Supabase: таблица garments и Storage bucket с миграциями\n- TanStack Start (SSR) + React 19 + Tailwind v4\n- Отдельная библиотека Python (для CLI и бота/бэкенда): фото человека + фото одежды → результат"
+    },
+    "en": {
+      "description": "An AI-powered web application for a clothing store that \"dresses\" the customer's photo with selected apparel: upload photo → select clothes → download result. No registration required.",
+      "content": "## About the project\n\n- 3-step try-on page: photo → clothes → result\n- Hidden admin panel: clothing catalog management (can also be opened by clicking the title 5 times)\n- Gemini image editing (Lovable AI Gateway / Google AI Studio / OpenRouter)\n- Supabase: garments table and Storage bucket with migrations\n- TanStack Start (SSR) + React 19 + Tailwind v4\n- Separate Python library (for CLI and bot/backend): person photo + clothing photo → result"
+    }
+  },
+  "project:moneyflow": {
+    "_src": "5ffb6fb76380",
+    "ru": {
+      "description": "Узбекское приложение для личных финансов: баланс, бюджеты, цели, подписки, долги, графики аналитики и ИИ-ассистент, отвечающий только на основе реальных данных.",
+      "content": "## О проекте\n\nENTER → СОХРАНИТЬ → РАСЧЕТ → АНАЛИЗ → ОТЧЕТ → ЦЕЛЬ → ПРИВЫЧКА\n\n- Dashboard: баланс, доход/расход/накопления, день/неделя/месяц, остаток бюджета, дневной лимит\n- Операции: поиск, фильтр, сортировка, редактирование, копирование\n- Анализ: доходы против расходов, дневной график, категории, балл финансового здоровья, прогноз\n- Цели: прогресс, необходимая месячная сумма, примерный итог\n- Профиль: бюджеты (уведомления 70/90/100%), подписки, долги, регулярные платежи, экспорт в CSV/PDF, валюта, ночной/дневной режим\n- ИИ-ассистент никогда не придумывает цифры — только на основе реальных расчетов\n- Next.js 14 + Recharts; оффлайн localStorage, готова схема Supabase для production"
+    },
+    "en": {
+      "description": "Uzbek personal finance app: balance, budgets, goals, subscriptions, debts, analytics charts, and an AI assistant that answers only based on real data.",
+      "content": "## About the project\n\nENTER → SAVE → CALCULATE → ANALYZE → REPORT → GOAL → HABIT\n\n- Dashboard: balance, income/expense/savings, day/week/month, budget remaining, daily limit\n- Transactions: search, filter, sort, edit, copy\n- Analytics: income vs expense, daily chart, categories, financial health score, forecast\n- Goals: progress, required monthly amount, estimated completion\n- Profile: budgets (70/90/100% alerts), subscriptions, debts, recurring payments, CSV/PDF export, currency, dark/light mode\n- AI assistant never makes up numbers — strictly from real calculations\n- Next.js 14 + Recharts; offline localStorage, Supabase schema ready for production"
+    }
+  },
+  "project:kcal": {
+    "_src": "fa61135e7013",
+    "ru": {
+      "description": "Персональная система учета энергии: что вы съели, сколько потратили и как это влияет на вес. Телефонные сенсоры, анализ камеры и модель, подстраивающаяся под ваши весы.",
+      "content": "## О проекте\n\nКаждое число сопровождается уровнем достоверности, каждая оценка говорит о своем происхождении, день без данных записывается как «нет данных» — никогда не ноль.\n\n### Что имеется\n\n- Расход энергии: одно из 5 опубликованных уравнений (BMR), термический эффект пищи, ACSM ходьба/бег, тренировки\n- Трекинг активности через телефонные сенсоры\n- Анализ с камеры на устройстве: тренировки (pose model) и этикетки продуктов\n- Прогноз веса с калибровкой под показатели ваших весов\n- Открытый для аудита ledger: каждая килокалория со своим источником\n- PWA — устанавливается на телефон; 671 тест, строгий TypeScript"
+    },
+    "en": {
+      "description": "Personal energy accounting system: what you ate, how much you burned, and how it affects your weight. Phone sensors, camera analysis, and a model that adapts to your own scales.",
+      "content": "## About the project\n\nEvery number comes with its confidence level, every estimate tells you where it came from, a day without data is logged as \"no data\" — never zero.\n\n### Features\n\n- Energy expenditure: one of 5 published equations (BMR), thermic effect of food, ACSM walking/running, workouts\n- Activity tracking via phone sensors\n- On-device camera analysis: workouts (pose model) and food labels\n- Weight prediction calibrated to your own scale readings\n- Audit-friendly ledger: every kilocalorie with its source\n- PWA — installs on your phone; 671 tests, strict TypeScript"
+    }
+  },
+  "project:upseller": {
+    "_src": "d037ed4fffa8",
+    "ru": {
+      "description": "Система управления для академии обучения продажам: роли и права, CRM, финансовый учет и обновления в реальном времени — Next.js 15 + Supabase.",
+      "content": "## О проекте\n\n- Роли и права: CEO, менеджер, преподаватель и другие — готовы с сидами\n- Логин: пользователь вводит простой логин, система преобразует его во внутренний email\n- CRM: лиды, клиенты, виды услуг\n- Финансы: платежи, отчеты, графики Recharts\n- Supabase: Postgres + Auth + Realtime, политики RLS в миграциях\n- Next.js 15 (App Router) + TypeScript + Tailwind"
+    },
+    "en": {
+      "description": "Management system for a sales training academy: roles and permissions, CRM, financial accounting, and real-time updates — Next.js 15 + Supabase.",
+      "content": "## About the project\n\n- Roles and permissions: CEO, manager, teacher, and others — ready with seeds\n- Login: the user enters a simple login, the system converts it into an internal email\n- CRM: leads, clients, service types\n- Finance: payments, reports, Recharts charts\n- Supabase: Postgres + Auth + Realtime, RLS policies in migrations\n- Next.js 15 (App Router) + TypeScript + Tailwind"
+    }
+  },
+  "project:aytla": {
+    "_src": "2cb7ac797175",
+    "ru": {
+      "description": "Курс английского / русского / турецкого / узбекского языка для говорящих на узбекском, русском и турецком языках: каждый урок заканчивается разговорной практикой. Один код — web, Android и iOS.",
+      "content": "## О проекте\n\n- Последние 3 упражнения каждого урока — упражнения «скажи»: выученное проговаривается (при отсутствии микрофона — записывается)\n- Один курс, четыре целевых языка: каждое слово и предложение дается с переводом на узб / ру / тур\n- Путь начинается с цели: повседневная жизнь, путешествия, работа, учеба — подходящие разделы выходят на первый план\n- Аккаунты, облачная синхронизация, еженедельные лиги, небольшой API для разговорной практики с AI\n- Expo + React Native + react-native-web; 3D лендинг и интро-видео на Remotion"
+    },
+    "en": {
+      "description": "English / Russian / Turkish / Uzbek language course for speakers of Uzbek, Russian, and Turkish: every lesson ends with speaking practice. One codebase — web, Android, and iOS.",
+      "content": "## About the project\n\n- The last 3 exercises of each lesson are \"say\" exercises: learners speak out what they learned (or type it if they don't have a microphone)\n- One course, four target languages: every word and sentence comes with uz / ru / tr translations\n- The journey starts with a goal: daily life, travel, work, study — relevant sections come to the front\n- Accounts, cloud synchronization, weekly leagues, a small API for AI conversation practice\n- Expo + React Native + react-native-web; 3D landing page and Remotion intro video"
+    }
+  },
+  "project:ad-post-bot": {
+    "_src": "9837fe90eff0",
+    "ru": {
+      "description": "Пользователь выбирает сообщение (текст + картинка), интервал и группы — бот автоматически отправляет в Telegram-группы в назначенное время. Панель фаундера: статистика, пользователи, бан, анонс.",
+      "content": "## О проекте\n\n- Telegram-бот: регистрация, список групп, персональная ссылка на веб-панель\n- Веб-панель (Flask): текст сообщения + картинка, интервал, выбор групп, Start / Stop / Test\n- Фоновій планировщик каждые 30 секунд отправляет те, у которых подошло время\n- Панель фаундера: статистика, пользователи/бан, анонс, stopall\n- Единая схема БД, HMAC web auth, варианты Vercel serverless webhook + Render"
+    },
+    "en": {
+      "description": "The user selects a message (text + image), interval and groups — the bot automatically sends it to Telegram groups at the scheduled time. Founder panel: statistics, users, ban, announce.",
+      "content": "## About the project\n\n- Telegram bot: registration, group list, personal link to the web panel\n- Web panel (Flask): message text + image, interval, group selection, Start / Stop / Test\n- Background scheduler sends due messages every 30 seconds\n- Founder panel: statistics, users/ban, announce, stopall\n- Single DB schema, HMAC web auth, Vercel serverless webhook + Render options"
+    }
+  },
+  "project:instagram-mcp": {
+    "_src": "1a9127de5064",
+    "ru": {
+      "description": "MCP-сервер, позволяющий Claude читать комментарии к постам/reels в Instagram и отвечать на них: «ответь тем, кто спрашивал цену в последнем reels» — одной командой.",
+      "content": "## О проекте\n\nClaude сам пишет текст ответа; сервер предоставляет только чтение Instagram и одно действие записи в качестве tool.\n\n### Tool'ы\n\n- list_recent_media — последние посты/reels\n- get_media_details — детали одного поста\n- get_comments — комментарии без ответа (уже отвеченные исключаются — чтобы не отвечать одному человеку дважды)\n- reply_to_comment — массовый ответ\n\nАккаунт Instagram подключается в один клик через небольшую веб-страницу, защищенную паролем — не нужно вручную копировать токены. Next.js + Vercel."
+    },
+    "en": {
+      "description": "An MCP server that allows Claude to read and reply to Instagram post/reels comments: \"reply to those who asked for the price in the latest reels\" — with a single command.",
+      "content": "## About the Project\n\nClaude writes the response text itself; the server only provides reading Instagram and a single write action as a tool.\n\n### Tools\n\n- list_recent_media — recent posts/reels\n- get_media_details — details of a single post\n- get_comments — unanswered comments (already answered ones are filtered out — to avoid replying to the same person twice)\n- reply_to_comment — bulk reply\n\nInstagram account connects in one click via a small password-protected web page — no need to manually copy tokens. Next.js + Vercel."
+    }
+  },
+  "project:mood-drop": {
+    "_src": "615a9741df77",
+    "ru": {
+      "description": "Создайте небольшой цифровой сюрприз для близкого человека и отправьте его по ссылке: фотографии, выбор настроения, летящие частицы, сердечки и музыка.",
+      "content": "## О проекте\n\n- Страница создания: загрузка изображений, выбор настроения/стиля, пошаговый прогресс\n- Страница просмотра: открывается по ссылке, при нажатии появляются сердечки, летящие частицы, звук\n- Мобильная оптимизация, без горизонтального скролла, очень легкий\n- React + TypeScript + Vite + Tailwind"
+    },
+    "en": {
+      "description": "Create a small digital surprise for a loved one and send it via a link: photos, mood selection, flying particles, hearts, and music.",
+      "content": "## About the project\n\n- Creation page: image upload, mood/style selection, step-by-step progress\n- Viewing page: opens via link, triggers hearts, flying particles, and sound on click\n- Mobile-optimized, no horizontal scroll, very lightweight\n- React + TypeScript + Vite + Tailwind"
+    }
+  },
+  "project:python-kiosk": {
+    "_src": "b6ef366e714e",
+    "ru": {
+      "description": "Персональное десктоп-приложение для обучения Python: открываете один раз в день, нажимаете «Начать» — приложение блокируется, и выйти невозможно, пока не завершится 2 часа активной учебы.",
+      "content": "## О проекте\n\nПредназначено для JavaScript-разработчика: каждая тема объясняется в сравнении с JS.\n\n- Киоск-режим: окно возвращается наверх, забирает фокус, системные кнопки блокируются в три слоя\n- Восстановление сессии: если завершить через Task Manager, при повторном открытии приложения блокировка возвращается\n- Таймер не учитывает время, когда приложение закрыто\n- Уроки в формате JSON, ежедневный план\n- Electron + Vite + React; честные документы, протестированные на Windows 11"
+    },
+    "en": {
+      "description": "Personal Python learning desktop app: you open it once a day, click \"Start\" — the app locks, and you cannot exit until 2 hours of active study are complete.",
+      "content": "## About the Project\n\nDesigned for JavaScript developers: every topic is explained by comparing it with JS.\n\n- Kiosk mode: the window brings itself to the front, steals focus, and system keys are blocked in three layers\n- Session restoration: if killed via Task Manager, the lock returns when you reopen the app\n- The timer does not count time when the app is closed\n- Lessons in JSON format, daily plan\n- Electron + Vite + React; verified documents tested on Windows 11"
+    }
+  },
+  "project:smartrazgon": {
+    "_src": "5bb50ab446b0",
+    "ru": {
+      "description": "Интрадей-робот (Expert Advisor) для MetaTrader 5: отслеживает несколько пар и золото, открывает каждую сделку со SL/TP, отображает причину входа на графике. С веб-панелью и Telegram-ботом.",
+      "content": "## О проекте\n\n- Робот (MQL5): анализ, торговля, контроль рисков, отображение причин на графике\n- Веб-панель (Python): статус, графики, причины сделок, настройки, управление\n- Демо-режим: работа с симулятором без MT5\n- Telegram-бот: мониторинг и управление роботом с телефона\n- Отчеты бэктестинга, документация по стратегии и архитектуре\n- Предупреждение: ни один робот не гарантирует прибыль — рекомендуется сначала протестировать на демо, а затем на центовом счете"
+    },
+    "en": {
+      "description": "Intraday trading robot (Expert Advisor) for MetaTrader 5: monitors multiple pairs and gold, opens every trade with SL/TP, and draws the entry reason on the chart. Features a web dashboard and Telegram bot.",
+      "content": "## About the Project\n\n- Robot (MQL5): analysis, trading, risk management, drawing reasons on the chart\n- Web dashboard (Python): status, charts, trade reasons, settings, control\n- Demo mode: work with a simulator without MT5\n- Telegram bot: monitor and control the robot from your phone\n- Backtest reports, strategy and architecture documentation\n- Warning: no robot guarantees profit — testing on a demo account first, then on a cent account, is recommended"
+    }
+  },
+  "project:pet-mutation-lab": {
+    "_src": "bc9d95daca7c",
+    "ru": {
+      "description": "Полноценный симулятор питомцев в Roblox: открытие яиц, слияние существ в Mutation Reactor, открытие новых видов, открытие миров, квесты и рейтинг Top Mutators.",
+      "content": "## О проекте\n\n- Все ассеты процедурные — оригинальные существа, карта и UI\n- Исходный код на Luau в структуре Rojo (server/client/ModuleScripts)\n- Инструмент StudioSync: синхронизация с любым пустым плейсом даже без Rojo\n- Открытие яиц, мутационный реактор, миры, квесты, таблица лидеров, хэллоуинские питомцы\n- Трейлер, созданный в Remotion\n- Архитектура, план тестирования, документация к релизу"
+    },
+    "en": {
+      "description": "Full Roblox pet simulator: hatching eggs, fusing creatures in the Mutation Reactor, discovering new species, unlocking worlds, quests, and the Top Mutators leaderboard.",
+      "content": "## About the project\n\n- All assets are procedural — original creatures, map, and UI\n- Luau source code in Rojo structure (server/client/ModuleScripts)\n- StudioSync tool: sync to any empty place even without Rojo\n- Egg hatching, mutation reactor, worlds, quests, leaderboard, Halloween pets\n- Trailer video created in Remotion\n- Architecture, test plan, release documentation"
+    }
+  },
+  "project:motion-design": {
+    "_src": "8b6784a66d54",
+    "ru": {
+      "description": "Моушн-дизайн трейлер, нарисованный в коде внутри мокапа телефона: сетка, эффекты grain и glow, затем рендерится в 30 fps MP4 видео с помощью Playwright + FFmpeg.",
+      "content": "## О проекте\n\n- Чистая анимация на HTML + CSS + JavaScript, без внешних библиотек\n- Кадры захватываются с помощью Playwright, собираются в 30 fps видео через FFmpeg\n- Постер, бриф, кастинг, бокс, телефоны — отдельные статичные кадры\n- Вертикальный формат для социальных сетей"
+    },
+    "en": {
+      "description": "Motion design trailer drawn in code inside a phone mockup: grid, grain, glow effects, then rendered into 30 fps MP4 video using Playwright + FFmpeg.",
+      "content": "## About the project\n\n- Pure HTML + CSS + JavaScript animation, without external libraries\n- Frames are captured with Playwright, assembled into 30 fps video with FFmpeg\n- Poster, brief, casting, box, phones — separate still frames\n- Vertical format for social media"
+    }
+  },
+  "project:uy-ishlari-bot": {
+    "_src": "a7301ce05c5c",
+    "ru": {
+      "description": "Telegram-бот для управления домашними заданиями, напоминаниями и расписанием занятий с ролями учителя, старосты, ученика и разработчика. Ежедневные автоматические напоминания.",
+      "content": "## О проекте\n\n- Роли: developer (все), учитель (задание, напоминание, расписание), староста, ученик\n- Получение, подтверждение, отметка о выполнении заданий\n- Автоматические напоминания: 07:30 расписание на сегодня, 08:00 задания с истекающим сроком, 19:30 уроки на завтра\n- Статистика и удаление — для developer\n- Python + aiogram + SQLite"
+    },
+    "en": {
+      "description": "A Telegram bot for managing homework, reminders, and class schedules with teacher, class monitor, student, and developer roles. Daily automatic reminders.",
+      "content": "## About the project\n\n- Roles: developer (all), teacher (task, reminder, schedule), class monitor, student\n- Fetching, approving, and marking tasks as completed\n- Automatic reminders: 07:30 today's schedule, 08:00 upcoming tasks, 19:30 tomorrow's classes\n- Statistics and deletion — for developer\n- Python + aiogram + SQLite"
+    }
+  },
+  "project:ghost-portfolio": {
+    "_src": "989c8b89243e",
+    "ru": {
+      "description": "Персональный портфолио в стиле киберпанк-терминала — сайт, который вы сейчас видите. Создан с использованием React, Supabase и Framer Motion.",
+      "content": "## О проекте\n\nЭтот сайт полностью построен на базе **React + TypeScript**, в качестве бэкенда используется **Supabase**; список проектов хранится прямо на сайте — он будет работать даже при отключенной базе данных.\n\n### Особенности\n\n- Живой фон в стиле Matrix, кастомный курсор, 8-битные звуки\n- Глитч / декодинг анимации текста, экран загрузки\n- Три языка (uz / ru / en) — автоматический перевод\n- Админ-панель: проекты, блог, услуги, сообщения, статистика\n- Форма контактов → уведомления в Telegram\n- Собственная система аналитики (без cookie)"
+    },
+    "en": {
+      "description": "A cyberpunk-terminal style personal portfolio — the website you are currently viewing. Built with React, Supabase, and Framer Motion.",
+      "content": "## About the project\n\nThis website is built entirely on **React + TypeScript**, using **Supabase** as the backend; the project list is stored directly within the site — it works even if the database is down.\n\n### Features\n\n- Matrix-style live background, custom cursor, 8-bit sounds\n- Glitch / decode text animations, boot screen\n- Three languages (uz / ru / en) — automatic translation\n- Admin panel: projects, blog, services, messages, statistics\n- Contact form → Telegram notifications\n- Custom analytics system (cookie-free)"
+    }
+  },
+  "service:1": {
+    "_src": "50cc1c6df2f4",
+    "ru": {
+      "title": "Создание веб-сайтов",
+      "description": "Landing page, корпоративный сайт или интернет-магазин — с современным дизайном, быстрой работой и SEO."
+    },
+    "en": {
+      "title": "Website Development",
+      "description": "Landing page, corporate website, or online store — with modern design, high performance, and SEO."
+    }
+  },
+  "service:2": {
+    "_src": "7c3558a0f2df",
+    "ru": {
+      "title": "Программирование Telegram ботов",
+      "description": "Боты для магазинов, прием заказов, Mini App, интеграция с CRM и автоматизация бизнес-процессов."
+    },
+    "en": {
+      "title": "Telegram bot programming",
+      "description": "Store bots, order acceptance, Mini Apps, CRM integration, and business process automation."
+    }
+  },
+  "service:3": {
+    "_src": "4e526f1460f6",
+    "ru": {
+      "title": "Веб-приложения (SPA/PWA)",
+      "description": "Сложные интерактивные приложения на базе React: админ-панели, дашборды, внутренние системы."
+    },
+    "en": {
+      "title": "Web applications (SPA/PWA)",
+      "description": "Complex interactive applications based on React: admin panels, dashboards, internal systems."
+    }
+  },
+  "service:4": {
+    "_src": "5fa9ccf64b21",
+    "ru": {
+      "title": "Backend va API",
+      "description": "Supabase, Node.js, Python, проектирование баз данных и создание безопасных API."
+    },
+    "en": {
+      "title": "Backend va API",
+      "description": "Supabase, Node.js, Python, database design and building secure APIs."
+    }
+  },
+  "service:5": {
+    "_src": "1e3d711937d5",
+    "ru": {
+      "title": "AI integratsiya",
+      "description": "Подключение Claude, Gemini и других моделей к продукту: ИИ-ассистенты, генераторы, MCP-серверы."
+    },
+    "en": {
+      "title": "AI integration",
+      "description": "Integrating Claude, Gemini and other models into the product: AI assistants, generators, MCP servers."
+    }
+  },
+  "service:6": {
+    "_src": "4ecc1c87b47b",
+    "ru": {
+      "title": "Техническая поддержка",
+      "description": "Развитие существующих проектов, исправление ошибок и добавление новых функций."
+    },
+    "en": {
+      "title": "Technical Support",
+      "description": "Development of existing projects, bug fixing, and adding new features."
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
-import { supabase } from '../lib/supabase'
+import { loadProject } from '../lib/projects'
 import { useI18n } from '../lib/i18n'
 import { l10n } from '../lib/l10n'
 import type { Project } from '../types'
@@ -22,16 +22,11 @@ export default function ProjectDetail() {
 
   useEffect(() => {
     if (!slug) return
-    supabase
-      .from('projects')
-      .select('*')
-      .eq('slug', slug)
-      .maybeSingle()
-      .then(({ data }) => {
-        setProject((data as Project) ?? null)
-        setLoading(false)
-        if (data) document.title = `${(data as Project).title} — ${links.siteName}`
-      })
+    loadProject(slug).then((data) => {
+      setProject(data)
+      setLoading(false)
+      if (data) document.title = `${data.title} — ${links.siteName}`
+    })
   }, [slug])
 
   if (loading) {

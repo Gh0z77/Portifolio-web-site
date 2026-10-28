@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { supabase } from '../lib/supabase'
+import { loadServices } from '../lib/projects'
 import { useI18n } from '../lib/i18n'
 import { l10n } from '../lib/l10n'
 import type { Service } from '../types'
@@ -75,15 +75,10 @@ export default function Services() {
   }, [tr])
 
   useEffect(() => {
-    supabase
-      .from('services')
-      .select('*')
-      .eq('active', true)
-      .order('sort_order', { ascending: true })
-      .then(({ data }) => {
-        setServices((data as Service[]) ?? [])
-        setLoading(false)
-      })
+    loadServices().then((list) => {
+      setServices(list)
+      setLoading(false)
+    })
   }, [])
 
   return (

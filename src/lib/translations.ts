@@ -187,7 +187,7 @@ const uz: Translation = {
     marquee: ['REACT', 'TYPESCRIPT', 'NODE.JS', 'SUPABASE', 'TAILWIND', 'TELEGRAM API', 'POSTGRESQL', 'FRAMER MOTION', 'VITE', 'GIT'],
     stats: [
       { value: '3+', label: 'yil tajriba' },
-      { value: '20+', label: 'bajarilgan loyiha' },
+      { value: '30+', label: 'bajarilgan loyiha' },
       { value: '15+', label: 'mamnun mijoz' },
       { value: '100%', label: "mas'uliyat" },
     ],
@@ -437,7 +437,7 @@ const ru: Translation = {
     marquee: ['REACT', 'TYPESCRIPT', 'NODE.JS', 'SUPABASE', 'TAILWIND', 'TELEGRAM API', 'POSTGRESQL', 'FRAMER MOTION', 'VITE', 'GIT'],
     stats: [
       { value: '3+', label: 'года опыта' },
-      { value: '20+', label: 'выполненных проектов' },
+      { value: '30+', label: 'выполненных проектов' },
       { value: '15+', label: 'довольных клиентов' },
       { value: '100%', label: 'ответственность' },
     ],
@@ -687,7 +687,7 @@ const en: Translation = {
     marquee: ['REACT', 'TYPESCRIPT', 'NODE.JS', 'SUPABASE', 'TAILWIND', 'TELEGRAM API', 'POSTGRESQL', 'FRAMER MOTION', 'VITE', 'GIT'],
     stats: [
       { value: '3+', label: 'years of experience' },
-      { value: '20+', label: 'projects delivered' },
+      { value: '30+', label: 'projects delivered' },
       { value: '15+', label: 'happy clients' },
       { value: '100%', label: 'commitment' },
     ],

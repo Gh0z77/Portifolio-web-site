@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { supabase } from '../lib/supabase'
+import { loadProjects } from '../lib/projects'
 import { useI18n } from '../lib/i18n'
 import { l10n } from '../lib/l10n'
 import type { Project } from '../types'
@@ -23,15 +23,10 @@ export default function Portfolio() {
   }, [tr])
 
   useEffect(() => {
-    supabase
-      .from('projects')
-      .select('*')
-      .order('sort_order', { ascending: true })
-      .order('created_at', { ascending: false })
-      .then(({ data }) => {
-        setProjects((data as Project[]) ?? [])
-        setLoading(false)
-      })
+    loadProjects().then((list) => {
+      setProjects(list)
+      setLoading(false)
+    })
   }, [])
 
   const techs = useMemo(() => {
