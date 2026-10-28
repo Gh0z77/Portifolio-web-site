@@ -57,3 +57,17 @@ Birinchi o'rnatish: `setup-supabase.ps1` skripti funksiyalarni deploy qiladi, sx
 - Telegram sozlamalari va parolni almashtirish
 
 Parolni birinchi kirishdan keyin **Sozlamalar** bo'limida almashtirib oling.
+
+## Loyihalar ro'yxati (statik)
+
+Loyihalar Supabase'siz ham ko'rinadi: ro'yxat `src/data/projects.ts` da, rasmlar `public/projects/` da,
+ru/en tarjimalar `src/data/projects.i18n.json` da. Yangi loyiha qo'shgach:
+
+```bash
+node scripts/translate-static.mjs   # GEMINI_API_KEY bo'lsa Gemini, bo'lmasa Google gtx
+npm run build
+```
+
+Baza ishlasa, undagi yozuvlar statik ro'yxat ustiga qo'shiladi (bir xil slug bo'lsa baza ustun).
+Eslatma: Vercel hobby jamoasi faqat jamoa a'zosi muallifligidagi commitlarni deploy qiladi —
+shu repoda commit muallifi `Gh0z7 <marufzonkodirov0@gmail.com>` bo'lishi kerak (lokal git config shunday sozlangan).
