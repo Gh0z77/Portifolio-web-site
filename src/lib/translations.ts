@@ -211,7 +211,7 @@ const uz: Translation = {
     info: {
       nick: 'nik', job: 'kasb', jobVal: 'Full-stack dasturchi',
       location: 'lokatsiya', locationVal: "O'zbekiston",
-      email: 'email', emailVal: 'rustamasaka1991@gmail.com',
+      email: 'email', emailVal: 'diorbek2255@gmail.com',
       status: 'holat', statusVal: 'yangi loyihalarga ochiq 🟢',
     },
     skillsTitle: 'TEXNOLOGIYALAR',
@@ -461,7 +461,7 @@ const ru: Translation = {
     info: {
       nick: 'ник', job: 'профессия', jobVal: 'Full-stack разработчик',
       location: 'локация', locationVal: 'Узбекистан',
-      email: 'email', emailVal: 'rustamasaka1991@gmail.com',
+      email: 'email', emailVal: 'diorbek2255@gmail.com',
       status: 'статус', statusVal: 'открыт для проектов 🟢',
     },
     skillsTitle: 'ТЕХНОЛОГИИ',
@@ -711,7 +711,7 @@ const en: Translation = {
     info: {
       nick: 'nick', job: 'role', jobVal: 'Full-stack developer',
       location: 'location', locationVal: 'Uzbekistan',
-      email: 'email', emailVal: 'rustamasaka1991@gmail.com',
+      email: 'email', emailVal: 'diorbek2255@gmail.com',
       status: 'status', statusVal: 'open for projects 🟢',
     },
     skillsTitle: 'TECH STACK',

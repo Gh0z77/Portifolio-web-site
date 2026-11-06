@@ -36,7 +36,7 @@ export interface SiteLinks {
 
 export const DEFAULT_LINKS: SiteLinks = {
   siteName: 'GHOST',
-  email: 'rustamasaka1991@gmail.com',
+  email: 'diorbek2255@gmail.com',
   telegramUser: '@ghost_dev',
   telegram: 'https://t.me/',
   github: 'https://github.com/',
