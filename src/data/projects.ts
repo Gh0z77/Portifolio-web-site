@@ -708,8 +708,9 @@ Butun sayt bitta uzluksiz 3D "kino": tun → tong → kun → oltin soat. Oxirid
 - Ariza formasi: Vercel serverless → Telegram bot`,
     image: 'uzgrow-3d-site.jpg',
     tech: ['Blender', 'Python', 'React Three Fiber', 'Three.js', 'GSAP', 'TypeScript', 'Vite'],
+    live: 'https://web-beta-tawny-93.vercel.app',
     github: 'https://github.com/Gh0z77/uzgrow-3d-site',
-    sort: 32,
+    sort: 1.5,
     date: '2026-11-01',
   },
   {
