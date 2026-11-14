@@ -691,6 +691,47 @@ Bu sayt to'liq **React + TypeScript** asosida qurilgan, backend sifatida **Supab
     sort: 31,
     date: '2026-08-16',
   },
+  {
+    slug: 'uzgrow-3d-site',
+    title: 'UZ GROW — 3D kinematik scroll sayt',
+    description:
+      "Scroll qilgan sari bo'sh dalada issiqxona quriladi, ko'chatlar ekiladi, o'sadi va hosil beradi: Blender'da yaratilgan 3D sahna brauzerda kino kabi o'ynaydi.",
+    content: `## Loyiha haqida
+
+Butun sayt bitta uzluksiz 3D "kino": tun → tong → kun → oltin soat. Oxirida UZ GROW qurgan majmualar panoramasi va ariza formasi.
+
+### Nimalar qilindi
+
+- 3D sahna, modellar va kamera yo'li Blender'da Python skriptlar bilan yig'ilgan, GLB'ga eksport
+- React Three Fiber (Three.js): scroll = Blender timeline, kamera va animatsiya scroll'ga bog'langan
+- GSAP ScrollTrigger + Lenis bilan silliq scroll, bloom / vignette / film grain effektlari
+- O'simliklar uchun impostor va instancing: telefonda ham tez ishlaydi
+- Ob-havo (yomg'ir, qor), uch til (uz / ru / en)
+- Ariza formasi: Vercel serverless → Telegram bot`,
+    image: 'uzgrow-3d-site.jpg',
+    tech: ['Blender', 'Python', 'React Three Fiber', 'Three.js', 'GSAP', 'TypeScript', 'Vite'],
+    github: 'https://github.com/Gh0z77/uzgrow-3d-site',
+    sort: 32,
+    date: '2026-11-01',
+  },
+  {
+    slug: 'kochatxona-3d',
+    title: "Ko'chatxona 3D — Muzrabod issiqxonasi",
+    description:
+      "UZ GROW uchun interaktiv 3D issiqxona: ekin turini tanlab, ko'chat sotish yoki hosil yetishtirish daromadini hisoblash va issiqxonani 3D'da aylantirib ko'rish.",
+    content: `## Loyiha haqida
+
+- React Three Fiber'da to'liq 3D issiqxona: konstruksiya, plyonka, yon pardalar, sug'orish
+- 3 ta 26×40 m issiqxona, 7 xil ekin (pomidor, qalampir, baqlajon, bodring, payvand tarvuz, karam, qulupnay), har biri o'z barg modeli bilan
+- Ikki rejim: ko'chat sotish va hosil yetishtirish
+- Iqtisod kalkulyatori: tannarx, narx, aylanishlar soni va yillik foyda, qiymatlarni foydalanuvchi o'zgartira oladi
+- LOD va sifat sozlamalari: kuchsiz qurilmalarda ham ravon ishlaydi`,
+    image: 'kochatxona-3d.jpg',
+    tech: ['React Three Fiber', 'Three.js', 'React', 'TypeScript', 'Vite'],
+    github: 'https://github.com/Gh0z77/3d-issiqxona',
+    sort: 33,
+    date: '2026-11-06',
+  },
 ]
 
 export const STATIC_SERVICES: StaticService[] = [

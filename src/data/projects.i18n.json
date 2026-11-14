@@ -351,6 +351,28 @@
       "content": "## About the project\n\nThis website is built entirely on **React + TypeScript**, using **Supabase** as the backend; the project list is stored directly within the site — it works even if the database is down.\n\n### Features\n\n- Matrix-style live background, custom cursor, 8-bit sounds\n- Glitch / decode text animations, boot screen\n- Three languages (uz / ru / en) — automatic translation\n- Admin panel: projects, blog, services, messages, statistics\n- Contact form → Telegram notifications\n- Custom analytics system (cookie-free)"
     }
   },
+  "project:uzgrow-3d-site": {
+    "_src": "df6354336c8c",
+    "ru": {
+      "description": "По мере скролла на пустом поле строится теплица, высаживаются саженцы, они растут и дают урожай: 3D-сцена, созданная в Blender, воспроизводится в браузере как кино.",
+      "content": "## О проекте\n\nВесь сайт — это одно непрерывное 3D-\"кино\": ночь → рассвет → день → золотой час. В конце — панорама комплексов, построенных UZ GROW, и форма заявки.\n\n### Что было сделано\n\n- 3D-сцена, модели и траектория камеры собраны в Blender с помощью Python-скриптов, экспорт в GLB\n- React Three Fiber (Three.js): скролл = таймлайн Blender, камера и анимация привязаны к скроллу\n- GSAP ScrollTrigger + плавный скролл с Lenis, эффекты bloom / vignette / film grain\n- Импосторы и инстансинг для растений: работает быстро даже на телефонах\n- Погода (дождь, снег), три языка (uz / ru / en)\n- Форма заявки: Vercel serverless → Telegram bot"
+    },
+    "en": {
+      "description": "As you scroll, a greenhouse is built on an empty field, seedlings are planted, grow, and bear fruit: a 3D scene created in Blender plays in the browser like a movie.",
+      "content": "## About the project\n\nThe entire website is a single continuous 3D \"movie\": night → dawn → day → golden hour. At the end, a panorama of the complexes built by UZ GROW and an application form.\n\n### What was done\n\n- 3D scene, models, and camera path assembled in Blender using Python scripts, exported to GLB\n- React Three Fiber (Three.js): scroll = Blender timeline, camera and animation tied to scroll\n- GSAP ScrollTrigger + smooth scroll with Lenis, bloom / vignette / film grain effects\n- Impostors and instancing for plants: works fast even on mobile phones\n- Weather (rain, snow), three languages (uz / ru / en)\n- Application form: Vercel serverless → Telegram bot"
+    }
+  },
+  "project:kochatxona-3d": {
+    "_src": "c6be0ded703e",
+    "ru": {
+      "description": "Интерактивная 3D-теплица для UZ GROW: выбор типа культуры, расчет дохода от продажи рассады или выращивания урожая и просмотр теплицы в 3D с возможностью вращения.",
+      "content": "## О проекте\n\n- Полноценная 3D-теплица на React Three Fiber: конструкция, пленка, боковые шторы, полив\n- 3 теплицы размером 26×40 м, 7 различных культур (томат, перец, баклажан, огурец, привитый арбуз, капуста, клубника), каждая со своей моделью листьев\n- Два режима: продажа рассады и выращивание урожая\n- Экономический калькулятор: себестоимость, цена, количество оборотов и годовая прибыль, значения могут изменяться пользователем\n- LOD и настройки качества: плавная работа даже на слабых устройствах"
+    },
+    "en": {
+      "description": "Interactive 3D greenhouse for UZ GROW: select crop type, calculate income from selling seedlings or growing harvest, and view the greenhouse in 3D with rotation.",
+      "content": "## About the project\n\n- Full 3D greenhouse in React Three Fiber: structure, film, side curtains, irrigation\n- 3 greenhouses of 26×40 m, 7 different crops (tomato, pepper, eggplant, cucumber, grafted watermelon, cabbage, strawberry), each with its own leaf model\n- Two modes: selling seedlings and growing harvest\n- Economic calculator: cost price, price, number of cycles, and annual profit, values can be modified by the user\n- LOD and quality settings: runs smoothly even on low-end devices"
+    }
+  },
   "service:1": {
     "_src": "50cc1c6df2f4",
     "ru": {
