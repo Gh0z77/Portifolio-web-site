@@ -1,4 +1,4 @@
-import { supabase } from './supabase'
+import { getSupabase } from './db'
 
 /** Standart ranglar (rasmdan olingan palitra) */
 export const DEFAULT_PRIMARY = '#5fb50a'
@@ -69,7 +69,7 @@ export function applyTheme(primaryHex: string, accentHex: string) {
 /** Saytga kirganda bazadan tema ranglarini yuklash (bo'lmasa standart qoladi) */
 export async function loadTheme() {
   try {
-    const { data } = await supabase
+    const { data } = await (await getSupabase())
       .from('site_settings')
       .select('key, value')
       .in('key', ['theme_primary', 'theme_accent'])

@@ -18,22 +18,25 @@ export default function CustomCursor() {
     if (!window.matchMedia('(pointer: fine)').matches) return
     setEnabled(true)
 
+    let raf = 0
+    // Sichqoncha to'xtab, halqa yetib kelgach sikl to'xtaydi; harakat bo'lsa qayta yonadi
+    const wake = () => { if (!raf) raf = requestAnimationFrame(loop) }
     const onMove = (e: MouseEvent) => {
       pos.current = { x: e.clientX, y: e.clientY }
       const target = e.target as HTMLElement | null
       hovering.current = !!target?.closest(
         'a, button, input, textarea, select, label, [data-hover], [role="button"]'
       )
+      wake()
     }
-    const onDown = () => { pressed.current = true }
-    const onUp = () => { pressed.current = false }
+    const onDown = () => { pressed.current = true; wake() }
+    const onUp = () => { pressed.current = false; wake() }
 
     window.addEventListener('mousemove', onMove, { passive: true })
     window.addEventListener('mousedown', onDown)
     window.addEventListener('mouseup', onUp)
 
-    let raf = 0
-    const loop = () => {
+    function loop() {
       const dot = dotRef.current
       const ring = ringRef.current
       if (dot && ring) {
@@ -48,9 +51,10 @@ export default function CustomCursor() {
         ring.style.borderColor = hovering.current ? 'rgb(var(--clr-amber) / 0.9)' : 'rgb(var(--clr-matrix) / 0.8)'
         ring.style.backgroundColor = hovering.current ? 'rgb(var(--clr-amber) / 0.08)' : 'transparent'
       }
-      raf = requestAnimationFrame(loop)
+      const settled = Math.abs(pos.current.x - ringPos.current.x) < 0.3 && Math.abs(pos.current.y - ringPos.current.y) < 0.3
+      raf = settled ? 0 : requestAnimationFrame(loop)
     }
-    raf = requestAnimationFrame(loop)
+    wake()
 
     return () => {
       cancelAnimationFrame(raf)

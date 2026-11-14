@@ -1,4 +1,5 @@
-import { supabase, ADMIN_BASE } from './supabase'
+import { ADMIN_BASE } from './admin'
+import { getSupabase } from './db'
 
 /**
  * O'z analytics tizimimiz: har sahifa ochilishi Supabase'ga yoziladi.
@@ -33,10 +34,9 @@ export function trackPageView(path: string, lang: string) {
   const referrer =
     ref && !ref.includes(window.location.host) ? ref.slice(0, 200) : null
 
-  supabase
-    .from('page_views')
-    .insert({ path, visitor: visitorId(), lang, device, referrer })
-    .then(() => {
+  getSupabase()
+    .then((sb) => sb.from('page_views').insert({ path, visitor: visitorId(), lang, device, referrer }))
+    .catch(() => {
       /* xato bo'lsa ham sayt ishlashiga ta'sir qilmaydi */
     })
 }

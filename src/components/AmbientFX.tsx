@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { readThemeVar } from '../lib/theme'
 import { playExplosion } from '../lib/sound'
+import { isScrolling } from '../lib/scrolling'
 
 /**
  * Sayt bo'ylab yuruvchi jonzotlar (canvas):
@@ -249,11 +250,19 @@ export default function AmbientFX() {
 
     let last = performance.now()
     let raf = 0
+    let hidden = false
     const FRAME_MS = 33 // ~30fps chegara — tejamkor
 
     const tick = (now: number) => {
       raf = requestAnimationFrame(tick)
       if (now - last < FRAME_MS) return
+      // Scroll paytida jonzotlar yashiriladi: canvas sahifaga bog'langan, kadr chizish scroll'ni sekinlatardi
+      if (isScrolling()) {
+        if (!hidden) { ctx.clearRect(0, 0, vw, vh); hidden = true }
+        last = now
+        return
+      }
+      hidden = false
       const dt = Math.min((now - last) / 1000, 0.06)
       last = now
 

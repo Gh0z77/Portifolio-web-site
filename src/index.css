@@ -83,11 +83,10 @@ body {
   color: rgb(var(--clr-on-amber)) !important;
 }
 
-/* Muzlatilgan shisha effekti — kartalar/panellar fonni xiralashtiradi */
+/* Shisha panel. backdrop-filter yo'q: kartalar doim harakatlanayotgan canvas fon ustida turadi,
+   blur esa har kadrda butun ekranda qayta hisoblanib, scroll'ni qotirib qo'yardi. */
 .glass {
-  background: rgb(10 15 30 / 0.72);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
+  background: rgb(10 15 30 / 0.88);
 }
 
 /* Burchaklari kesilgan cyberpunk shakl */

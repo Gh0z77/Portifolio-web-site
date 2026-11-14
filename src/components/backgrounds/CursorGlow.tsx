@@ -15,11 +15,6 @@ export default function CursorGlow() {
     target.current = { x: window.innerWidth / 2, y: window.innerHeight / 3 }
     cur.current = { ...target.current }
 
-    const onMove = (e: MouseEvent) => {
-      target.current = { x: e.clientX, y: e.clientY }
-    }
-    window.addEventListener('mousemove', onMove, { passive: true })
-
     let raf = 0
     const loop = () => {
       cur.current.x += (target.current.x - cur.current.x) * 0.06
@@ -27,8 +22,15 @@ export default function CursorGlow() {
       if (ref.current) {
         ref.current.style.transform = `translate3d(${cur.current.x - 600}px, ${cur.current.y - 600}px, 0)`
       }
-      raf = requestAnimationFrame(loop)
+      // yetib kelgach to'xtaydi — sichqoncha qimirlamasa CPU ishlamaydi
+      const settled = Math.abs(target.current.x - cur.current.x) < 0.5 && Math.abs(target.current.y - cur.current.y) < 0.5
+      raf = settled ? 0 : requestAnimationFrame(loop)
     }
+    const onMove = (e: MouseEvent) => {
+      target.current = { x: e.clientX, y: e.clientY }
+      if (!raf) raf = requestAnimationFrame(loop)
+    }
+    window.addEventListener('mousemove', onMove, { passive: true })
     raf = requestAnimationFrame(loop)
 
     return () => {

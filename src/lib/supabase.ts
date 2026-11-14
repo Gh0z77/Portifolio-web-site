@@ -17,7 +17,4 @@ export const functionsUrl = `${supabaseUrl}/functions/v1`
 
 export const ADMIN_EMAIL = (import.meta.env.VITE_ADMIN_EMAIL as string) || ''
 
-/** Maxfiy admin yo'li — .env dagi VITE_ADMIN_PATH orqali o'zgartiriladi */
-export const ADMIN_SLUG = (import.meta.env.VITE_ADMIN_PATH as string) || 'admin'
-export const ADMIN_BASE = `/${ADMIN_SLUG}`
-export const ADMIN_DASH = `${ADMIN_BASE}/dashboard`
+export { ADMIN_SLUG, ADMIN_BASE, ADMIN_DASH } from './admin'

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { readThemeVar } from '../../lib/theme'
+import { isScrolling } from '../../lib/scrolling'
 
 const CHARS = 'アイウエオカキクケコサシスセソ0123456789ABCDEFghost<>/{}[]=+*#$_'
 
@@ -60,7 +61,7 @@ export default function MatrixRain() {
 
     const draw = (t: number) => {
       raf = requestAnimationFrame(draw)
-      if (t - last < FRAME_MS) return
+      if (t - last < FRAME_MS || isScrolling()) return
       last = t
 
       // Iz qoldirish effekti

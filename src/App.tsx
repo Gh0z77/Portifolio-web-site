@@ -17,7 +17,7 @@ import { loadTheme } from './lib/theme'
 import { initSound } from './lib/sound'
 import { trackPageView } from './lib/analytics'
 import { useI18n } from './lib/i18n'
-import { ADMIN_BASE, ADMIN_DASH } from './lib/supabase'
+import { ADMIN_BASE, ADMIN_DASH } from './lib/admin'
 
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
@@ -60,10 +60,17 @@ export default function App() {
     trackPageView(location.pathname, lang)
   }, [location.pathname, lang])
 
-  // Iron Man uslubidagi boot ekrani — faqat sayt birinchi ochilganda (adminda emas)
-  const [booting, setBooting] = useState(
-    () => !window.location.pathname.startsWith(ADMIN_BASE)
-  )
+  // Iron Man uslubidagi boot ekrani — sessiyada faqat bir marta (har yangilashda 3 soniya kuttirmaydi), adminda emas
+  const [booting, setBooting] = useState(() => {
+    if (window.location.pathname.startsWith(ADMIN_BASE)) return false
+    try {
+      if (sessionStorage.getItem('ghost-booted')) return false
+      sessionStorage.setItem('ghost-booted', '1')
+    } catch {
+      /* storage yopiq — boot ko'rsatiladi */
+    }
+    return true
+  })
 
   // Admin panel tanlagan tema ranglarini yuklash
   useEffect(() => {

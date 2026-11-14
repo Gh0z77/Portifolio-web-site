@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
 import { translations, LANGS } from './translations'
 import type { Lang, Translation } from './translations'
-import { supabase } from './supabase'
+import { getSupabase } from './db'
 
 /**
  * Admin paneldan saqlangan kontentni standart tarjimalar ustiga chuqur birlashtirish.
@@ -147,11 +147,8 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   // Admin panelda tahrirlangan sayt matnlarini yuklash
   useEffect(() => {
-    supabase
-      .from('site_settings')
-      .select('value')
-      .eq('key', 'content_overrides')
-      .maybeSingle()
+    getSupabase()
+      .then((sb) => sb.from('site_settings').select('value').eq('key', 'content_overrides').maybeSingle())
       .then(({ data }) => {
         if (data?.value) {
           try {
